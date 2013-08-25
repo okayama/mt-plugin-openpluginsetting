@@ -1,0 +1,10 @@
+id: OpenPluginSetting
+name: OpenPluginSetting
+key: openpluginsetting
+description: <__trans phrase="Open plugin setting.">
+l10n_class: OpenPluginSetting::L10N
+callbacks:
+    save_config_filter: $openpluginsetting::OpenPluginSetting::Callbacks::_cb_save_config_filter
+    MT::App::CMS::post_run: $openpluginsetting::OpenPluginSetting::Callbacks::_cb_cms_post_run
+    MT::App::CMS::template_param.cfg_plugin: $openpluginsetting::OpenPluginSetting::Callbacks::_cb_tp_cfg_plugin
+    MT::App::CMS::template_source.cfg_plugin: $openpluginsetting::OpenPluginSetting::Callbacks::_cb_ts_cfg_plugin
